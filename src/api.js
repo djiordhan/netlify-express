@@ -1,6 +1,6 @@
 const express = require('express');
-var cors = require('cors');
-import * as pjson from '../package.json';
+const cors = require('cors');
+const pjson = require('../package.json');
 
 const serverless = require('serverless-http');
 
