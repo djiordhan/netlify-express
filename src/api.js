@@ -4,6 +4,8 @@ const serverless = require('serverless-http');
 
 const app = express();
 
+app.use(cors());
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
