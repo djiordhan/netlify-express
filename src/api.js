@@ -1,10 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const pjson = require('../package.json');
+const bodyParser = require('body-parser');
 
 const serverless = require('serverless-http');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use(cors());
 
@@ -18,8 +22,14 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.json({
+        'version': pjson.version
+    });
+});
+
+router.post('/', (req, res) => {
+    res.json({
         'version': pjson.version,
-        'hello': 'formbird'
+        'body': JSON.parse(req.body)
     });
 });
 
