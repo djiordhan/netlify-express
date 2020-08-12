@@ -23,54 +23,7 @@ app.use(function(req, res, next) {
 
 const router = express.Router();
 
-const postData = [
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },{
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },
-    {
-        data: new Date(),
-        data: { "test": "test "}
-    },{
-        data: new Date(),
-        data: { "test": "test "}
-    }
-];
+const postData = [];
 
 router.get('/', (req, res) => {
 
